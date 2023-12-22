@@ -1,0 +1,31 @@
+{
+  "name": "user",
+  "version": "1.0.0",
+  "description": "User model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jason-michael/user.git"
+  },
+  "keywords": [
+    "user",
+    "model",
+    "mongoose"
+  ],
+  "author": "Jason Michael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jason-michael/user/issues"
+  },
+  "homepage": "https://github.com/jason-michael/user#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.0-rc.5",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^4.13.7",
+    "validator": "^9.2.0",
+    "uuid": "^3.3.2"
+  }
+}
