@@ -1,0 +1,10 @@
+rootProject.name = 'tiny-demo'
+//公共模块总模块
+//include 'GradleParent'
+//include ':GradleParent:GradleCommon'
+//include ':GradleParent:GradleUtil'
+//project(':GradleParent:GradleCommon')?.name = 'GradleCommon'
+//project(':GradleParent:GradleUtil')?.name = 'GradleUtil'
+//project(':sub-project').projectDir = file("$rootDir/../sub-project")
+include 'demo-file-reader'
+
