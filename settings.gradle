@@ -7,4 +7,5 @@ rootProject.name = 'tiny-demo'
 //project(':GradleParent:GradleUtil')?.name = 'GradleUtil'
 //project(':sub-project').projectDir = file("$rootDir/../sub-project")
 include 'demo-file-reader'
+include 'demo-cucumber'
 

@@ -1,0 +1,7 @@
+- [Cucumber](https://cucumber.io/docs/installation/java/)
+- [Cucumber JVM Github](https://github.com/cucumber/cucumber-jvm)
+- [JUnit5](https://junit.org/junit5/docs/getting-started/)
+- IDEA plugin
+    - [Cucumber+](https://plugins.jetbrains.com/plugin/16289-cucumber-)
+    - [Cucumber for Java](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java)
+- [ChromeDriver](https://chromedriver.storage.googleapis.com/index.html)
