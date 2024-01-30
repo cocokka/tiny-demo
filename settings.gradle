@@ -8,4 +8,5 @@ rootProject.name = 'tiny-demo'
 //project(':sub-project').projectDir = file("$rootDir/../sub-project")
 include 'demo-file-reader'
 include 'demo-cucumber'
+include 'demo-security'
 
