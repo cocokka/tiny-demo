@@ -65,9 +65,25 @@ public class UserServiceImpl implements UserService, UserDetailsManager, UserDet
 			throw new UsernameNotFoundException("User " + username + " not found");
 		}
 		else {
-			Collection<? extends GrantedAuthority> authorities = new ArrayList<>();
-			return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
-					user.isEnabled(), true, true, true, authorities);
+			Collection<GrantedAuthority> authorities = new ArrayList<>();
+			if ("lisi".equals(user.getUsername())) {
+				authorities.add(() -> "USER_ADD");
+			}
+
+			return org.springframework.security.core.userdetails.User.builder()
+				.username(user.getUsername())
+				.password(passwordEncoder.encode(user.getPassword()))
+				.credentialsExpired(false)
+				.accountLocked(false)
+				.authorities(authorities)
+				.roles("USER")
+				.disabled(!user.isEnabled())
+				.build();
+
+			// return new
+			// org.springframework.security.core.userdetails.User(user.getUsername(),
+			// user.getPassword(),
+			// user.isEnabled(), true, true, true, authorities);
 		}
 	}
 

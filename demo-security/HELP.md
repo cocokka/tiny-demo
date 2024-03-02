@@ -27,21 +27,32 @@ These additional references should also help you:
 
 #### Spring security
 
-1. login page: http://localhost:8080/login
+1. login page: http://localhost:8080/security/login
     - default username is user.
     - default password could be found in console.
 
 1. code
 
-   ~~~java
+   ```java
    org.springframework.security.web.SecurityFilterChain
    org.springframework.security.web.DefaultSecurityFilterChain {
       private final List<Filter> filters;
    }
-   ~~~
-   
-   ~~~java
+   ```
+
+   ```java
    org.springframework.boot.autoconfigure.security.SecurityProperties
    org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication
    org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
-   ~~~
+   ```
+
+   ```java
+   org.springframework.security.core.context.SecurityContextHolder
+   ```
+1. [swagger page](http://localhost:8080/security/doc.html#/home)
+
+1. RBAC(role-based access control, 基于角色的访问控制)：用户-角色-权限-资源
+   - 用户：user
+   - 角色：role： admin、user
+   - 权限：permission： add、delete、update、query
+   - 资源：resource： /user/**

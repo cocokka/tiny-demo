@@ -3,6 +3,7 @@ package com.tinydemo.security.controller;
 import com.tinydemo.security.entity.User;
 import com.tinydemo.security.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,7 @@ public class UserController {
 	private final UserService userService;
 
 	@RequestMapping("/all")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public List<User> list() {
 		return userService.list();
 	}
