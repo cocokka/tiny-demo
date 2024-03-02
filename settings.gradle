@@ -9,4 +9,5 @@ rootProject.name = 'tiny-demo'
 include 'demo-file-reader'
 include 'demo-cucumber'
 include 'demo-security'
+include 'demo-oauth2-login'
 
